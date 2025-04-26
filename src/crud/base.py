@@ -43,7 +43,8 @@ class CRUDBase(Generic[ModelType, CreateSchemaType, UpdateSchemaType]):
             The model with the given id.
         """
         statement = select(self.model).where(
-            self.model.id == id, self.model.is_active == True
+            self.model.id == id,
+            self.model.is_active == True,  # noqa E712
         )
         return db.exec(statement).one_or_none()
 
@@ -65,7 +66,7 @@ class CRUDBase(Generic[ModelType, CreateSchemaType, UpdateSchemaType]):
         """
         statement = select(self.model)
         if alive_only:
-            statement = statement.where(self.model.is_active == True)
+            statement = statement.where(self.model.is_active == True)  # noqa E712
         statement = statement.offset(skip).limit(limit)
         results = db.exec(statement).all()
         total = len(results)

@@ -34,7 +34,7 @@ def get_all_todos(db=Depends(get_db)) -> TodoAll:
 @router.get("/{todo_id}", response_model=Todo)
 def get_todo(todo_id: UUID, db=Depends(get_db)) -> Todo:
     """
-    Get a single Todo.
+    Get a single Todo
     """
     todo = todo_crud.get(db, todo_id)
 
