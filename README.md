@@ -13,7 +13,7 @@ This is a Todo List API built with FastAPI and PostgreSQL. The application allow
 
    ```bash
    git clone git@github.com:iKenshu/todolist.git
-   cd todo-list
+   cd todolist
    ```
 
 2. Create a virtual environment and activate it:
@@ -32,10 +32,16 @@ This is a Todo List API built with FastAPI and PostgreSQL. The application allow
 4. Run the application locally:
 
    ```bash
-   fastapi run main.py
+   fastapi run src/main.py
    ```
 
 5. Access the API documentation at `http://127.0.0.1:8000/docs`.
+6. You can also access the GraphQL API at `http://127.0.0.1:8000/graphql`.
+7. Run the tests using `pytest` inside a virtual environment:
+
+   ```bash
+   pytest
+   ```
 
 ## Running with Docker
 
@@ -44,13 +50,11 @@ This is a Todo List API built with FastAPI and PostgreSQL. The application allow
    ```bash
    docker-compose up --build
    ```
+   or
+
+   ```bash
+   docker compose build
+   docker compose up
+   ```
 
 2. Access the API documentation at `http://127.0.0.1:8000/docs`.
-
-## Testing
-
-Run the tests using `pytest`:
-
-```bash
-pytest
-```

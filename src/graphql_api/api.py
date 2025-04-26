@@ -10,5 +10,4 @@ from graphql_api.queries import Query
 
 schema = strawberry.Schema(query=Query, mutation=Mutation)
 
-# Crear un router GraphQL
 graphql_router = GraphQLRouter(schema)
