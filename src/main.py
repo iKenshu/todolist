@@ -1,6 +1,7 @@
 from contextlib import asynccontextmanager
 
 from fastapi import FastAPI
+from mangum import Mangum
 
 from config.database import init_db
 from router import api_router
@@ -25,3 +26,6 @@ app.include_router(api_router, prefix="/api")
 @app.get("/")
 def root():
     return {"message": "Go to /docs"}
+
+
+handler = Mangum(app)

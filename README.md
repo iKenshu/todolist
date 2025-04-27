@@ -2,6 +2,8 @@
 
 This is a Todo List API built with FastAPI and PostgreSQL. The application allows users to manage their todo items, including creating, reading, updating, and deleting tasks.
 
+This project is now in a production URL: [https://todo-list-delicate-field-2232.fly.dev/docs](https://todo-list-delicate-field-2232.fly.dev/docs)
+
 ## Requirements
 
 - Python 3.12
