@@ -1,9 +1,9 @@
-# fly.toml app configuration file generated for todo-list-delicate-field-2232 on 2025-04-27T07:10:49-05:00
+# fly.toml app configuration file generated for todo-list-cold-wave-1206 on 2025-04-27T08:40:16-05:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'todo-list-delicate-field-2232'
+app = 'todo-list-cold-wave-1206'
 primary_region = 'bog'
 
 [build]
