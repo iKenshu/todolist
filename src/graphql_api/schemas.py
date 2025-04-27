@@ -3,13 +3,14 @@ This file contains the schemas for the GraphQL API.
 """
 
 from typing import List, Optional
+from uuid import UUID
 
 import strawberry
 
 
 @strawberry.type
 class TodoType:
-    id: str
+    id: UUID
     title: str
     description: str
     is_completed: bool

@@ -3,6 +3,7 @@ This file contains the queries for the GraphQL API.
 """
 
 from typing import Optional
+from uuid import UUID
 
 import strawberry
 
@@ -25,7 +26,7 @@ class Query:
         return TodoAllType(data=data, total=total)
 
     @strawberry.field
-    def get_todo(self, todo_id: str) -> Optional[TodoType]:
+    def get_todo(self, todo_id: UUID) -> Optional[TodoType]:
         """
         Get a single Todo.
         """

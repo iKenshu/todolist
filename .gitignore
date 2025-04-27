@@ -11,3 +11,4 @@ venv/
 
 # Ignore files
 .DS_Store
+test.db

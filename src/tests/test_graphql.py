@@ -20,6 +20,11 @@ def test_get_all_todos():
     WHEN a GET request is made to the /graphql endpoint
     THEN a 200 status code and a list of Todo objects is returned
     """
+    db = get_db()
+
+    todo = TodoCreate(title="Test todo", description="Test description")
+    todo_crud.create(db, todo)
+
     query = """
     query {
       getAllTodos {
