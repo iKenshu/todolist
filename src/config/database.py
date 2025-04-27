@@ -6,9 +6,7 @@ import os
 
 from sqlmodel import Session, SQLModel, create_engine
 
-DATABASE_URL = os.getenv(
-    "DATABASE_URL", "postgresql://postgres@localhost:5432/todo_db"
-)
+DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///./test.db")
 engine = create_engine(DATABASE_URL)
 
 
